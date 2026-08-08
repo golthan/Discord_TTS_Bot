@@ -141,3 +141,7 @@ vite.config.ts.timestamp-*
 # Runtime data / TTS audio cache (regenerated automatically)
 data/
 tts_cache/
+
+# Desktop build: baked-in secrets and packaged output
+desktop/embedded-env.json
+release/

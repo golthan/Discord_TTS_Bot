@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'" />
+    <title>Discord TTS Bot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="identity">
+        <h1>Discord TTS Bot</h1>
+        <span id="status" class="status status--stopped">
+          <span class="dot"></span><span id="statusText">Đã tắt</span>
+        </span>
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" class="btn btn--start">Bật bot</button>
+        <button id="stopBtn" class="btn btn--stop" disabled>Tắt bot</button>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <label class="check">
+        <input type="checkbox" id="autoStart" />
+        <span>Tự động bật bot khi mở app</span>
+      </label>
+
+      <div class="toolbar__right">
+        <label class="check">
+          <input type="checkbox" id="autoScroll" checked />
+          <span>Tự cuộn</span>
+        </label>
+        <button id="dataBtn" class="btn btn--ghost">Mở thư mục dữ liệu</button>
+        <button id="clearBtn" class="btn btn--ghost">Xoá log</button>
+      </div>
+    </section>
+
+    <main>
+      <div id="log" class="log" role="log" aria-live="polite"></div>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

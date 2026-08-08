@@ -112,4 +112,10 @@ async function shutdown(signal: string): Promise<void> {
 process.on("SIGINT", () => void shutdown("SIGINT"));
 process.on("SIGTERM", () => void shutdown("SIGTERM"));
 
+// Windows does not deliver real signals to child processes, so the desktop
+// shell asks for a graceful shutdown over the IPC channel instead.
+process.on("message", (msg: unknown) => {
+  if (msg === "shutdown") void shutdown("ipc");
+});
+
 void client.login(TOKEN);

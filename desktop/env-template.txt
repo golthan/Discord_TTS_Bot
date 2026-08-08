@@ -1,0 +1,15 @@
+# Đổi tên file này thành:  .env
+# rồi đặt nó CÙNG THƯ MỤC với DiscordTTSBot-Share.exe
+#
+# Chỉ 2 dòng dưới đây là bắt buộc.
+
+DISCORD_TOKEN=dan_token_cua_bot_vao_day
+CLIENT_ID=dan_client_id_vao_day
+
+# ── Tuỳ chọn (xoá đi cũng được, sẽ dùng giá trị mặc định) ──
+# IDLE_TIMEOUT_MS=300000
+# MAX_INPUT_LEN=350
+# USER_COOLDOWN=900
+# DEFAULT_TTS_ENGINE=google
+# DEFAULT_GENDER=female
+# DEFAULT_SPEED=1
